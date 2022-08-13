@@ -8,9 +8,9 @@ Para cargar los datos del archivo json se debe utilizar el comando "loaddata" en
 Por otra parte, para acceder a la aplicación una vez ejecutado el comando runserver:
 
 * Api Endpoints
-- localhost:8000/api/arriendo-autos/cliente/
-- localhost:8000/api/arriendo-autos/arriendo/
-- localhost:8000/api/arriendo-autos/empresa/
+  localhost:8000/api/arriendo-autos/cliente/
+  localhost:8000/api/arriendo-autos/arriendo/
+  localhost:8000/api/arriendo-autos/empresa/
  
  * App 
- - localhost:8000/
+  localhost:8000/
