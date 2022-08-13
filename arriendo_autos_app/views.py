@@ -185,10 +185,18 @@ def getRentIds():
 
 #2.- Ids clientes ordenados por apellido
 def getClientByLastName():
-    data = getClientIds()
-    clientsOrderByLastName = sorted(data, key=lambda x: x["name"])
+    clients = getClientIds()
+    clientsLastName = []
 
-    #pprint(clientsOrderByLastName)
+    for client in clients:
+        for i in client['name']:
+            name = client['name'].split()
+        clientsLastName.append({
+            'id' : client['id'],
+            'lastName' : name[1]
+        })
+
+    clientsOrderByLastName = sorted(clientsLastName, key=lambda x: x["lastName"])
     return clientsOrderByLastName
 
 
