@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Función ocho{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Función ocho{% endblock %}
+{% block content_header_actual%}Función ocho{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <p>Obtener un diccionario en donde las llaves sean los nombres de las empresas y los valores el id
+            de su cliente con el que menos dinero ha ganado (def getClientsWithLessExpense():).</p> 
+    </div>
+    
+    <div class="row px-3 py-3 mb-3 ml-1 bg-black ">
+        <div class="col text-success ">
+            {{ result }}
+        </div> 
+    </div>
+
+    
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

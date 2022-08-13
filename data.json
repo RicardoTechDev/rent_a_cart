@@ -1,0 +1,334 @@
+[
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 1,
+        "fields": {
+            "rut": "18620855-1", 
+            "name": "Angel Serrano"
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 2,
+        "fields": {
+            "rut": "11345435-2", 
+            "name": "Roser Abreu"
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 3,
+        "fields": {
+            "rut": "14256777-k", 
+            "name": "Rosa Campos" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 4,
+        "fields": {
+            "rut": "12675688-0", 
+            "name": "Celestino Fuentes"
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 5,
+        "fields": {
+            "rut": "14234334-4", 
+            "name": "Rebeca Rojas"
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 6,
+        "fields": {
+            "rut": "10152323-8", 
+            "name": "Andrea Palomo"  
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 7,
+        "fields": {
+            "rut": "15587715-4", 
+            "name": "Maria Inmaculada Jiménez" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 8,
+        "fields": {
+            "rut": "15034590-7", 
+            "name": "Marcela Navarro" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 9,
+        "fields": {
+            "rut": "11804345-3", 
+            "name": "Francisco Manuel Gago" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Cliente",
+        "pk": 10,
+        "fields": {
+            "rut": "13804238-0", 
+            "name": "Patricio Duran" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Empresa",
+        "pk": 1,
+        "fields": {
+            "name": "CHILE ARRIENDA AUTOS S.A" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Empresa",
+        "pk": 2,
+        "fields": {
+            "name": "AUTOK S.A" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Empresa",
+        "pk": 3,
+        "fields": {
+            "name": "RENT A CAR S.A" 
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 1,
+        "fields": {
+            "cliente_id": 6,
+            "empresa_id": 1,
+            "costo_diario": 15000,
+            "dias": 3
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 2,
+        "fields": {
+            "cliente_id": 1,
+            "empresa_id": 3,
+            "costo_diario": 18000,
+            "dias": 2
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 3,
+        "fields": {
+            "cliente_id": 5,
+            "empresa_id": 3,
+            "costo_diario": 135000,
+            "dias": 1
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 4,
+        "fields": {
+            "cliente_id": 2,
+            "empresa_id": 2,
+            "costo_diario": 5600,
+            "dias": 4
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 5,
+        "fields": {
+            "cliente_id": 3,
+            "empresa_id": 1,
+            "costo_diario": 23000,
+            "dias": 3
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 6,
+        "fields": {
+            "cliente_id": 7,
+            "empresa_id": 2,
+            "costo_diario": 15000,
+            "dias": 3
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 7,
+        "fields": {
+            "cliente_id": 8,
+            "empresa_id": 3,
+            "costo_diario": 45900,
+            "dias": 2
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 8,
+        "fields": {
+            "cliente_id": 10,
+            "empresa_id": 3,
+            "costo_diario": 19000,
+            "dias": 5
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 9,
+        "fields": {
+            "cliente_id": 9,
+            "empresa_id": 3,
+            "costo_diario": 51000,
+            "dias": 7
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 10,
+        "fields": {
+            "cliente_id": 5,
+            "empresa_id": 1,
+            "costo_diario": 89000,
+            "dias": 7
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 11,
+        "fields": {
+            "cliente_id": 1,
+            "empresa_id": 2,
+            "costo_diario": 16000,
+            "dias": 1
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 12,
+        "fields": {
+            "cliente_id": 3,
+            "empresa_id": 3,
+            "costo_diario": 37500,
+            "dias": 1
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 13,
+        "fields": {
+            "cliente_id": 6,
+            "empresa_id": 1,
+            "costo_diario": 19200,
+            "dias": 2
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 14,
+        "fields": {
+            "cliente_id": 6,
+            "empresa_id": 3,
+            "costo_diario": 10000,
+            "dias": 3
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 15,
+        "fields": {
+            "cliente_id": 6,
+            "empresa_id": 2,
+            "costo_diario": 5900,
+            "dias": 2
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 16,
+        "fields": {
+            "cliente_id": 10,
+            "empresa_id": 1,
+            "costo_diario": 9000,
+            "dias": 5
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 17,
+        "fields": {
+            "cliente_id": 10,
+            "empresa_id": 3,
+            "costo_diario": 13500,
+            "dias": 5
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 18,
+        "fields": {
+            "cliente_id": 9,
+            "empresa_id": 1,
+            "costo_diario": 38200,
+            "dias": 4
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 19,
+        "fields": {
+            "cliente_id": 7,
+            "empresa_id": 2,
+            "costo_diario": 17000,
+            "dias": 1
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 20,
+        "fields": {
+            "cliente_id": 5,
+            "empresa_id": 3,
+            "costo_diario": 1000,
+            "dias": 10
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 21,
+        "fields": {
+            "cliente_id": 1,
+            "empresa_id": 2,
+            "costo_diario": 6000,
+            "dias": 20
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 22,
+        "fields": {
+            "cliente_id": 3,
+            "empresa_id": 1,
+            "costo_diario": 16200,
+            "dias": 7
+        }
+    },
+    {
+        "model": "arriendo_autos_app.Arriendo",
+        "pk": 23,
+        "fields": {
+            "cliente_id": 2,
+            "empresa_id": 2,
+            "costo_diario": 10000,
+            "dias": 5
+        }
+    }
+
+]

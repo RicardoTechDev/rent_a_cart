@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Todos los Arriendos{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Arriendos{% endblock %}
+{% block content_header_actual%}Arriendos{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <!-- Button trigger modal -->
+        <a href="#">
+            <button type="button" class="btn bg-gradient-primary">
+                <i class='fas fa-user-plus'></i>
+                Nuevo Arriendo
+            </button>
+        </a>
+    </div>
+    <!-- Tabla de arriendos -->
+    <table id="tabla" class="table table-sm table-bordered table-striped table-hover">
+        <thead class="bg-warning">
+        <tr>
+            <th>Id</th>
+            <th>Empresa</th>
+            <th>Cliente</th>
+            <th>Días</th>
+            <th>Costo Dario</th>
+            <th>Total</th>
+            <th>Opciones</th>
+        </tr>
+        </thead>
+        <tbody> 
+            {% for rent in rents %}
+            <tr>
+                <td>{{ rent.id }}</td>
+                <td>{{ rent.company }}</td>
+                <td>{{ rent.client }}</td>
+                <td>{{ rent.cantDays }}</td>
+                <td>{{ rent.costDay }}</td>
+                <td>{{ rent.totalCostRent }}</td>
+                <td>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary">
+                            Editar
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary">
+                            Eliminar
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- ./Tabla de arriendos -->
+{% endblock %}
+

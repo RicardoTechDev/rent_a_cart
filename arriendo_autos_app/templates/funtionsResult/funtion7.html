@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Función siete{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Función siete{% endblock %}
+{% block content_header_actual%}Función siete{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <p>Detalle: Obtener un diccionario de empresas en donde las llaves sean los nombres y los valores sean la
+            cantidad total de clientes que han arrendado autos por una duración igual o superior a una
+            semana (def getCompaniesWithRentsOver1Week():).</p> 
+    </div>
+    
+    <div class="row px-3 py-3 mb-3 ml-1 bg-black ">
+        <div class="col text-success ">
+            {{ result }}
+        </div> 
+    </div>
+
+    
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

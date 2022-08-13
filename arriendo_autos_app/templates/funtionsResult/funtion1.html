@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Función uno{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Función uno{% endblock %}
+{% block content_header_actual%}Función uno{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <p>Detalle: Obtener lista con los clientes (def getClientIds():). </p> 
+    </div>
+    
+    <div class="row px-3 py-3 mb-3 ml-1 bg-black ">
+        <div class="col text-success ">
+            {{ result }}
+        </div> 
+    </div>
+
+    
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Función seis{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Función seis{% endblock %}
+{% block content_header_actual%}Función seis{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <p>Detalle: Obtener lista de las empresas ordenada crecientemente por la cantidad TOTAL de dinero
+            obtenido arrendando autos (def getCompaniesSortByProfits():).</p> 
+    </div>
+    
+    <div class="row px-3 py-3 mb-3 ml-1 bg-black ">
+        <div class="col text-success ">
+            {{ result }}
+        </div> 
+    </div>
+
+    
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

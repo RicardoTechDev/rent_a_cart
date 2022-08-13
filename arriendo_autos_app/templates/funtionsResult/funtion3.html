@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Función tres{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Función tres{% endblock %}
+{% block content_header_actual%}Función tres{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <p>Detalle: Obtener los nombres de clientes ordenados decrecientemente por la suma TOTAL de lo que ha
+            gastado en arriendo de autos en cualquiera de las empresas disponibles (def getClientsSortByRentExpenses():).</p> 
+    </div>
+    
+    <div class="row px-3 py-3 mb-3 ml-1 bg-black ">
+        <div class="col text-success ">
+            {{ result }}
+        </div> 
+    </div>
+
+    
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

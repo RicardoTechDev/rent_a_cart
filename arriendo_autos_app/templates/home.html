@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Home{% endblock %}
+
+    {% block preloader %}
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="{% static 'img/logo.png' %}" alt="Municipalidad de Coelemu" width="80">
+    </div>
+    {% endblock %}
+
+    <!-- Content Header (Page header) -->
+    {% block content_header_title%}Home aplicación Rent a Car{% endblock %}
+    {% block content_header_actual%}Otro Link{% endblock %}
+    <!-- /.content-header -->
+    {% block sidebar_menu %}
+    {% endblock %}
+    <!-- Main content -->
+    {% block content_main %}
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+            <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+                <div class="inner">
+                <h3>{{ totalCompanies }}</h3>
+
+                <p>Empresas registradas</p>
+                </div>
+                <div class="icon">
+                <i class="ion ion-model-s"></i>
+                </div>
+                <a href="{% url 'companies' %}" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-success">
+                <div class="inner">
+                <h3 id="sumRentsAmount">$</h3>
+                <p>Monto total en arriendos</p>
+                </div>
+                <div class="icon">
+                <i class="ion ion-cash"></i>
+                </div>
+                <a href="#" class="small-box-footer">Más información <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-warning">
+                <div class="inner">
+                <h3>{{ totalClients }}</h3>
+                <p>Clientes registrados</p>
+                </div>
+                <a href="#" title="Registra nuevo usuario">
+                    <div class="icon">
+                        <i class="ion ion-ios-people"></i>
+                    </div>
+                </a>
+                <a href="{% url 'clients' %}" class="small-box-footer">Más información<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            </div>
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-danger">
+                <div class="inner">
+                <h3 id="precio_gas">{{  totalRents }} </h3>
+                <p>Total arriendos</p>
+                </div>
+                <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+                </div>
+                <a href="{% url 'rents'%}" class="small-box-footer">Más información<i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            </div>
+            <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-6 connectedSortable">
+                <!-- card -->
+                <div class="card">
+                    <div class="card-header">
+                    <h3 class="card-title">
+                        Arriendos
+                    </h3>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+                    <div class="tab-content p-0">
+                        <div>
+                            <canvas id="retsChart"></canvas>
+                        </div>
+                    </div>
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </section>
+            <!-- /.Left col -->
+            <!-- right col (We are only adding the ID to make the widgets sortable)-->
+            <section class="col-lg-6 connectedSortable">
+                <!-- card -->
+                <div class="card">
+                    <div class="card-header">
+                    <h3 class="card-title">
+                        Título
+                    </h3>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+                    <div class="tab-content p-0">
+                        <div>
+                            <canvas id="clientsChart"></canvas>
+                        </div>
+                    </div>
+                    </div><!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </section>
+            <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+
+    
+    <!-- /.content -->
+    {% endblock %}
+{% block scripts %}
+<script>
+    const data = {
+        labels: {{rentsLabels|safe}},
+        datasets: [{
+                    label: 'Montos en arriendos por empresa',
+                    backgroundColor: [
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(153, 102, 255)',
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 159, 64)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)',
+                    'rgb(153, 102, 255)'
+                    ],
+                    borderWidth: 1,
+                    data: {{rentsData|safe}}
+                    }]
+    };
+
+    const config = {
+                    type: 'bar',
+                    data: data,
+                    options: {
+                        scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                        }
+                    },
+                };
+    const rentsChart = new Chart(
+        document.getElementById('retsChart'),
+        config
+    );
+</script>
+<script>
+    $(document).ready(function(){
+        function humanizeNumber(n) {
+            n = n.toString()
+            while (true) {
+                var n2 = n.replace(/(\d)(\d{3})($|,|\.)/g, '$1.$2$3')
+                if (n == n2) break
+                n = n2
+            }
+            return n
+            };
+    
+            let amount = "{{ sumRentsAmount }}"
+            $("#sumRentsAmount").append(humanizeNumber(amount));
+    });
+    </script>
+{% endblock %}

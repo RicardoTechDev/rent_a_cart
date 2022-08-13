@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Función cuatro{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Función cuatro{% endblock %}
+{% block content_header_actual%}Función cuatro{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <p>Detalle: Obtener diccionario en donde las llaves sean los nombres de las empresas y los valores un
+            arreglo con los ruts de sus clientes ordenados por nombres (def getCompanyClientsSortByName():).</p> 
+    </div>
+    
+    <div class="row px-3 py-3 mb-3 ml-1 bg-black ">
+        <div class="col text-success ">
+            {{ result }}
+        </div> 
+    </div>
+
+    
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

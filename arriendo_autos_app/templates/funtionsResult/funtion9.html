@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Función nueve{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Función nueve{% endblock %}
+{% block content_header_actual%}Función nueve{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <p>Agregar nuevo cliente con datos ficticios al conjunto de "clientes" y agregar un arriendo en
+            <AUTOK S.A> con un costo diario de $20.000.- por 30 días.
+            Para generar la respuesta, se debe utilizar la función de ranking correspondiente a la pregunta
+            nro 5, en donde se debe retornar la posición o índice que ocupa el cliente según el ranking
+            después de incorporarlo a los registros (def newClientRanking(): ).</p> 
+    </div>
+    
+    <div class="row px-3 py-3 mb-3 ml-1 bg-black ">
+        <div class="col text-success ">
+            {{ result }}
+        </div> 
+    </div>
+
+    
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}

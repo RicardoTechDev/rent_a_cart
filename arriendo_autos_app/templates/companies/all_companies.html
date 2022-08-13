@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo %}Empresas Registradas{% endblock %}
+
+<!-- Content Header (Page header) -->
+{% block content_header_title%}Empresas{% endblock %}
+{% block content_header_actual%}Empresas{% endblock %}
+<!-- Main content -->
+{% block content_main %}
+    <div class="row mb-3 ml-1">
+        <!-- Button trigger modal -->
+        <a href="#">
+            <button type="button" class="btn bg-gradient-primary">
+                <i class='fas fa-user-plus'></i>
+                Nueva Empresa
+            </button>
+        </a>
+    </div>
+    <!-- Tabla de empresas -->
+    <table id="tabla" class="table table-sm table-bordered table-striped table-hover">
+        <thead class="bg-warning">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Opciones</th>
+        </tr>
+        </thead>
+        <tbody> 
+            {% for company in companies %}
+            <tr>
+                <td>{{ company.id }}</td>
+                <td>{{ company.name }}</td>
+                <td>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary">
+                            Editar
+                        </button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-primary">
+                            Eliminar
+                        </button>
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- ./Tabla de empresas -->
+{% endblock %}
+{% block scripts %}
+
+{% endblock %}
